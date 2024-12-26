@@ -10,3 +10,9 @@
   font-weight: 600;
   font-style: normal;
 }
+@font-face {
+  font-family: 'honeycomb';
+  src: url('../fonts/honeycomb.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
