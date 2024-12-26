@@ -1,13 +1,13 @@
-<svg width="171" height="711" viewBox="0 0 171 711" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_188_1430)">
-<rect width="170.75" height="710.745" fill="#0E1923"/>
-<line y1="-87.272" x2="727.114" y2="-87.272" transform="matrix(0.000373783 1 1 -0.000373783 172.646 -1.89719)" stroke="white" stroke-width="174.544" stroke-dasharray="42.69 42.69"/>
-<rect y="624.185" width="170.75" height="40.7903" fill="#5F2A8D"/>
-<rect y="461.973" width="170.75" height="41.7389" fill="#ADE0DB"/>
+<svg width="240" height="999" viewBox="0 0 240 999" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_234_2013)">
+<rect width="240" height="999" fill="#0E1923"/>
+<line y1="-122.667" x2="1022.01" y2="-122.667" transform="matrix(0.000373783 1 1 -0.000373783 242.666 -2.66663)" stroke="white" stroke-width="245.333" stroke-dasharray="60 60"/>
+<rect y="877.333" width="240.001" height="57.3335" fill="#5F2A8D"/>
+<rect y="649.333" width="240.001" height="58.6668" fill="#ADE0DB"/>
 </g>
 <defs>
-<clipPath id="clip0_188_1430">
-<rect width="170.75" height="710.745" fill="white"/>
+<clipPath id="clip0_234_2013">
+<rect width="240" height="999" fill="white"/>
 </clipPath>
 </defs>
 </svg>
