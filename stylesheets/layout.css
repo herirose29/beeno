@@ -33,16 +33,9 @@ img.lines1 {
   font-size: 3.5vw;
   color: white;
   white-space: nowrap;
-  animation: text-move1 6s infinite linear;
+  animation: text-move1 20s infinite linear;
 }
-@keyframes text-move1 {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50.5%);
-  }
-}
+
 img.lines2 {
   width: 100%;
   height: 100%;
@@ -50,7 +43,6 @@ img.lines2 {
 .container {
   display: flex;
   justify-content: space-between;
-  width: 100vw;
   z-index: 1;
 }
 
@@ -61,31 +53,6 @@ img.lines2 {
   width: 50vw;
   height: 50vw;
   z-index: 1;
-}
-
-.square {
-  width: 100%;
-  height: 100%;
-  background-color: #0e1923;
-  transition: background-color 0.3s ease;
-}
-.square.color1:hover {
-  background-color: #4855a2;
-}
-.square.color2:hover {
-  background-color: #5f2a8d;
-}
-.square.color3:hover {
-  background-color: #1a8ca9;
-}
-.square.color4:hover {
-  background-color: #7ccec6;
-}
-.square.color5:hover {
-  background-color: #382661;
-}
-.square.color6:hover {
-  background-color: #2c7bbd;
 }
 
 .lines {
@@ -137,31 +104,461 @@ img.lines2 {
   background-color: #0e1923;
 }
 
-.animated-hexagon {
-  left: 30%;
+.second {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
+.animated-hexagon {
   position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: 40.3vw;
-  height: 62.1vh;
-  animation: rotateHexagon 3s linear infinite;
-  background-size: cover;
-  background-repeat: no-repeat;
-  /* Анимация шестиугольника */
+  width: 300px;
+  height: 300px;
   z-index: 2;
 }
+
 .animated-hexagon img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  animation: rotateHexagon 3s linear infinite;
 }
 
-@keyframes rotateHexagon {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
+.square {
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.square.color1 {
+  background-color: #4855a2;
+}
+.square.color2 {
+  background-color: #5f2a8d;
+}
+.square.color3 {
+  background-color: #1a8ca9;
+}
+.square.color4 {
+  background-color: #7ccec6;
+}
+.square.color5 {
+  background-color: #382661;
+}
+.square.color6 {
+  background-color: #2c7bbd;
+}
+
+.square:hover {
+  background-color: #0e1923;
+}
+.rectangle {
+  background-color: #eee;
+  overflow: hidden;
+  width: 100%;
+}
+
+.rectangle-items {
+  position: relative;
+  height: 400px;
+}
+
+.running-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.running-wrapper {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  width: fit-content;
+  position: relative;
+}
+
+.image-group {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rectangle-spric {
+  display: flex;
+  align-items: center;
+}
+
+.rectangle-pillous {
+  position: relative;
+  left: -50%;
+}
+
+.image1,
+.image2 {
+  display: flex;
+  align-items: center;
+}
+
+.image1 img,
+.image2 img {
+  height: 200px;
+}
+
+.four {
+  min-height: 700px;
+}
+
+.rectagle-vertical {
+  height: 700px;
+}
+
+.bee-container {
+  background: url(../images/flight.png) center center/cover no-repeat;
+  width: 60vw;
+  height: 700px;
+}
+
+.four-items {
+  display: flex;
+}
+.fifth-drop-wrapper {
+  display: none;
+}
+.drop-wrapper,
+.fifth-drop-wrapper {
+  height: 700px;
+  position: relative;
+  padding: 0 37px;
+  overflow: hidden;
+  margin: 0 50px 0 10px;
+}
+
+.image-stream,
+.fifth-image-stream {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: scroll-down 20s linear infinite;
+}
+.fifth-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.drop-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.image-stream {
+  animation: scroll-down 20s linear infinite;
+}
+
+.drop-wrapper:hover .image-stream {
+  animation-play-state: paused;
+}
+
+.zebra {
+  height: 700px;
+  width: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.zebra-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: scrollDown 20s linear infinite;
+}
+
+.zebra-black {
+  background-color: #0e1923;
+  height: 50px;
+  width: 100%;
+}
+
+.zebra-color {
+  background-color: #fff;
+  height: 50px;
+  width: 100%;
+  transition: background-color 0.3s ease, height 0.3s ease;
+}
+
+.zebra-color:hover {
+  background-color: #0e1923;
+}
+
+.zebra:hover .zebra-wrapper {
+  animation-play-state: paused;
+}
+.fifth {
+  height: 700px;
+  background-color: #fff;
+}
+.fifth-items__img {
+  background: url(../images/framebeekeper.jpg) center center/cover no-repeat;
+  width: 60vw;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.fifth-items__item__button {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  width: 300px;
+}
+.fifth-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fifth-items__item {
+  width: 40vw;
+  display: flex;
+  justify-content: start;
+  margin-top: 25px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+  border: none;
+  clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+  padding: 10px 40px;
+  color: #fff;
+}
+.button-1,
+.button-6 {
+  background-color: #5f2a8d;
+}
+.button-2,
+.button-7 {
+  background-color: #5f2a8d;
+}
+.button-3 {
+  background-color: #4855a2;
+}
+.button-4 {
+  background-color: #2c7bbd;
+}
+
+.button-5 {
+  background-color: #1a8ca9;
+}
+.poster-wrapper {
+  width: 65%;
+  height: 100%;
+  padding: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster {
+  width: 380px;
+  height: 82%;
+  position: absolute;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: splash-poster 5s steps(1) infinite;
+}
+
+.button span {
+  font-size: 22px;
+}
+
+.running-line-container {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.dashed-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 2px dashed #000;
+}
+
+.images-container {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  animation: moveLeft 10s linear infinite;
+}
+
+.dnk-image {
+  height: 100px;
+  vertical-align: middle;
+}
+
+.dnk-container {
+  position: relative;
+}
+
+.dnk-wrapper {
+  position: absolute;
+  left: -1000px;
+  width: 100vw;
+  transform: translateX(-50%);
+  animation: moveRight 10s linear infinite;
+  display: flex;
+  margin-top: 30px;
+}
+
+.dnk {
+  width: 100%;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.last {
+  overflow: hidden;
+  width: 100%;
+}
+
+.last-items {
+  padding: 20px 0;
+  display: flex;
+}
+
+.health {
+  width: 40%;
+}
+
+.health-container {
+  overflow: hidden;
+  border: 3px solid #2c7bbd;
+  height: 270px;
+}
+
+.health-wrapper {
+  display: flex;
+  animation: floatLeft 30s linear infinite;
+  height: 100%;
+}
+
+.health-image {
+  flex-shrink: 0;
+  height: 100%;
+}
+.d-none {
+  display: none;
+}
+.last-middle {
+  width: 20%;
+  background: url(../images/last-middle.png) center center/cover no-repeat;
+  height: 270px;
+  margin: 0 20px;
+}
+
+.letter-container {
+  width: 40%;
+  position: relative;
+  border: 3px solid #2c7bbd;
+  height: 270px;
+}
+.letter {
+  position: absolute;
+  color: white;
+  font-size: 3rem;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  user-select: none;
+}
+
+.letter-h1 {
+  top: 40%;
+  left: 20%;
+  animation: float1 8s ease-in-out infinite;
+}
+
+.letter-o {
+  top: 30%;
+  left: 35%;
+  animation: float2 7s ease-in-out infinite;
+}
+
+.letter-n {
+  top: 45%;
+  left: 45%;
+  animation: float3 9s ease-in-out infinite;
+}
+
+.letter-e {
+  top: 35%;
+  left: 55%;
+  animation: float4 8.5s ease-in-out infinite;
+}
+
+.letter-y {
+  top: 50%;
+  left: 40%;
+  animation: float5 7.5s ease-in-out infinite;
+}
+
+.letter-b {
+  top: 25%;
+  left: 50%;
+  animation: float6 8.2s ease-in-out infinite;
+}
+
+.letter-e2 {
+  top: 45%;
+  left: 65%;
+  animation: float7 7.8s ease-in-out infinite;
+}
+
+.letter-h2 {
+  top: 30%;
+  left: 25%;
+  animation: float8 8.7s ease-in-out infinite;
+}
+
+.lineFour {
+  display: none;
+}
+.four-zebra {
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  display: none;
+}
+
+.four-zebra-black {
+  height: 100%;
+  width: 50px;
+  background-color: #0e1923;
+}
+
+.four-zebra-color {
+  height: 100%;
+  width: 50px;
+  background-color: #fff;
+}
+
+.four-zebra-wrapper {
+  display: flex;
+  animation: fourZebra 20s linear infinite;
+  height: 100%;
+  width: 2400px;
 }
